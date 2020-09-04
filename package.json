@@ -10,7 +10,6 @@
     "heroku": "^7.42.13",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "start": "node index.js",
     "react-scripts": "^3.4.3"
   },
   "scripts": {
