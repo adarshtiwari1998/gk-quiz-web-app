@@ -1,38 +1,192 @@
-.App {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: sf ui text,sf pro icons,helvetica neue,helvetica,arial,sans-serif;
+  background-color: #060c23;
+  color: #233a59;
+  font-style: normal;
+  margin: 0;
+
+}
+
+.container {
+  max-width:100%;
+  margin: 1rem 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:#121212;
+  padding: 0 1.5rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+}
+
+
+#category, #amount{
+    display: block;
+    width: 100%;
+    padding: 10px 2px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #464545;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(189, 60, 60, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem;
+}
+
+.form-group > label {
+  /* color: #777;
+  font-size: .75rem;
+  margin-bottom: .25rem; */
+  display: inline-block;
+  max-width: 100%;
+  color:#777;
+  font-size: .75rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  padding: 1.2em 1em;
+  margin-top:15px;
+  margin-left:8px;
+  border-radius: .3em;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.btn:hover {
+  background-color: hsl(200, 100%, 40%);
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.listsection{
+  margin-bottom:100px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  background: #16142d;
+  color:#fff;
+  transform-style: preserve-3d;
+  transition: 150ms;
+  cursor: pointer;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+  left: 0;
+}
+
+.styleback{
+  list-style-type:upper-alpha;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  text-align:center;
+  color:#fff;
+  justify-content: center;
+  display:flex;
+}
+
+.flashcard-options {
+  margin-top: .5rem;
+  background: #262152;
+    border-radius: 4px;
+    padding:10px;
+}
+
+.flashcard-option {
+  margin-top: .25rem;
+  background: #262152;
+  padding:0px 0px 0px 0px;
+  border-radius: 4px;
+  color:#fff;
+  font-size: .75rem;
+   list-style-type:upper-alpha;
+  }
+
+
+.flashcard-option:hover {
+  background: linear-gradient(143.28deg,#56FE99 0%,#3EC8E7 100%);
+  color:#262152;
+  padding:2px;
+  
+}
+
+.flashcard-option:first-child {
+  margin-top: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #121212;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  color: white;
+  text-align: center;
+}
+.footer a {
+  color: skyblue;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
