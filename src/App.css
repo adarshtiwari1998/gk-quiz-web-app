@@ -140,10 +140,25 @@ body {
 .card .back {
   transform: rotateY(180deg);
   text-align:center;
-  color:#fff;
+  color:#121212;
+  border:2px solid green ;
   justify-content: center;
   display:flex;
+  background-color: white;
 }
+
+.card .back:before{
+  content:'✔️';
+  display:inline-block;
+  vertical-align: top;
+  line-height: 1em;
+  width: 1em;
+  height:1em;
+  margin-right: 0.7em;
+  text-align: center;
+  color: #999;
+  
+  }
 
 .flashcard-options {
   margin-top: .5rem;

@@ -79,11 +79,11 @@ function App() {
 
         </div>
       </div>
-      <footer class="footer">
+      {/* <footer class="footer">
       <h4>Get in touch</h4>
   <p>Number: <a href="tel:8595432208">8595432208</a></p>
   <p>Email us : <a href="mailto:tiwari1998adarsh@gmail.com">tiwari1998adarsh@gmail.com</a></p>
-</footer>
+</footer> */}
     </>
   );
 }
