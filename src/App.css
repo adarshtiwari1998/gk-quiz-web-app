@@ -150,7 +150,7 @@ body {
 .card .back:before{
   content:'✔️';
   display:inline-block;
-
+  vertical-align: top;
   line-height: 1em;
   width: 1em;
   height:1em;
