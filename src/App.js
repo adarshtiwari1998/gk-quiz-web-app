@@ -56,9 +56,13 @@ function App() {
 
   return (
     <>
+         <div class="header-right">
+  <a href="https://ko-fi.com/adarshtripathi123">
+    <button class="button"><span>☕ </span>Buy me a coffee</button></a>
+  </div>
       <form className="header" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="category">Category</label>
+          <label htmlFor="category">Question Category</label>
           <select id="category" ref={categoryEl}>
             {categories.map(category => {
               return <option value={category.id} key={category.id}>{category.name}</option>
@@ -66,11 +70,11 @@ function App() {
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="amount">Number of Questions</label>
+          <label htmlFor="amount">Enter Number of Questions</label>
           <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
         </div>
         <div className="form-group">
-          <button className="btn">Generate Question</button>
+          <button className="btn"><span>❓</span> Tap Here to Generate Question</button>
         </div>
       </form>
       <div className="container">
@@ -79,11 +83,15 @@ function App() {
 
         </div>
       </div>
-      {/* <footer class="footer">
-      <h4>Get in touch</h4>
-  <p>Number: <a href="tel:8595432208">8595432208</a></p>
+      <footer class="footer">
+        <h4>Develop and design by <span>👨‍💻 🧡 </span>Adarsh Tripathi</h4>
+      <h4>Contact us <span>👇</span></h4>
+  <p>Number: <a href="tel:+918595432208">+918595432208</a></p>
   <p>Email us : <a href="mailto:tiwari1998adarsh@gmail.com">tiwari1998adarsh@gmail.com</a></p>
-</footer> */}
+  <p className="moreapp">👉 More Apps <a href="https://facebook-web-app-fe4ec.web.app/">Facebook-web-app</a>,  
+  <a href="https://covid-19-tracker-web-app-8b400.web.app/"> covid-19-tracker web app</a>,
+  <a href="https://whatsapp-web-chat.web.app/"> whatsapp-web-chat</a>, <a href="https://zoom-web-app.herokuapp.com/b3f5ae2b-2207-4ced-a30a-973f5aac5b48">zoom-web-app</a> More coming soon 👈</p>
+</footer>
     </>
   );
 }

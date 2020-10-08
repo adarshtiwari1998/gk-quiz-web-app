@@ -9,6 +9,22 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width:10px;
+}
+::-webkit-scrollbar-track {
+background: linear-gradient(90deg,rgb(248,248,248),rgb(248,248,248));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#060c23;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px #3d486c;
+}
 body {
   font-size: 17px;
   font-weight: 400;
@@ -35,6 +51,44 @@ body {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
 }
 
+@media screen and (max-width: 500px) {
+  .header-right {
+    margin-top: 21px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .moreapp {
+    float:right;
+    width:470px;
+    font-size: 14px;
+    max-width: 100%;
+    margin-bottom:5px;
+    margin-top:5px;
+  }
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+.header-right {
+  margin-top: 28px;
+  margin-bottom: -52px;
+}
+
+}
+.button {
+  background-color: #e02828; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: -11px 10px;
+  cursor: pointer;
+}
 
 #category, #amount{
     display: block;
@@ -65,7 +119,7 @@ body {
   margin-bottom: .25rem; */
   display: inline-block;
   max-width: 100%;
-  color:#777;
+  color:#fff !important;
   font-size: .75rem;
   margin-bottom: 5px;
   font-weight: bold;
@@ -76,6 +130,7 @@ body {
   color: white;
   padding: 1.2em 1em;
   margin-top:15px;
+  text-transform: uppercase;
   margin-left:8px;
   border-radius: .3em;
   border: none;
@@ -95,7 +150,7 @@ body {
 }
 
 .listsection{
-  margin-bottom:100px;
+  margin-bottom:157px;
 }
 
 .card {
@@ -204,4 +259,12 @@ body {
   text-align: center;
 }
 
+
+.moreapp {
+  float:right;
+  width:470px;
+  max-width: 100%;
+  margin-bottom:5px;
+  margin-top:5px;
+}
 
